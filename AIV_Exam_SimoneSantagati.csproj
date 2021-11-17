@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{59F626D6-7D3C-4B6C-A07A-A5AE7AF2BCF1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AIV_Exam_SimoneSantagati</RootNamespace>
+    <AssemblyName>AIV_Exam_SimoneSantagati</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>D:\Tutto\AIV\Keyz\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F7487421B6A3BEB67876DE8E31F407B2B286011B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AIV_Exam_SimoneSantagati_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="aiv-audio, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Aiv.Audio.0.2.2\lib\net40\aiv-audio.dll</HintPath>
+    </Reference>
+    <Reference Include="aiv-fast2d, Version=1.0.7092.29749, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Aiv.Fast2D.0.15.5\lib\net40\aiv-fast2d.dll</HintPath>
+    </Reference>
+    <Reference Include="NVorbis, Version=0.8.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\NVorbis.0.8.6\lib\net35\NVorbis.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=2.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>packages\OpenTK.2.0.0\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actor\Actor.cs" />
+    <Compile Include="Engine\GameObjects\Cursor.cs" />
+    <Compile Include="Engine\GameObjects\TileObjs\Door.cs" />
+    <Compile Include="Engine\GameObjects\Items\Bananas.cs" />
+    <Compile Include="Engine\GameObjects\Items\Bones.cs" />
+    <Compile Include="Engine\GameObjects\Items\Book.cs" />
+    <Compile Include="Engine\GameObjects\Items\Coin.cs" />
+    <Compile Include="Engine\GameObjects\Items\Compass.cs" />
+    <Compile Include="Engine\GameObjects\Items\Crown.cs" />
+    <Compile Include="Engine\GameObjects\Items\Feather.cs" />
+    <Compile Include="Engine\GameObjects\Items\Gem.cs" />
+    <Compile Include="Engine\GameObjects\Items\Harp.cs" />
+    <Compile Include="Engine\GameObjects\Items\Leaf.cs" />
+    <Compile Include="Engine\GameObjects\Items\Mirror.cs" />
+    <Compile Include="Engine\GameObjects\Items\MoneyBag.cs" />
+    <Compile Include="Engine\GameObjects\Items\PointedItem.cs" />
+    <Compile Include="Engine\GameObjects\Items\Item.cs" />
+    <Compile Include="Engine\GameObjects\Items\Key.cs" />
+    <Compile Include="Engine\GameObjects\Items\Ring.cs" />
+    <Compile Include="Engine\GameObjects\Items\Scroll.cs" />
+    <Compile Include="Engine\GameObjects\Items\Seashell.cs" />
+    <Compile Include="Engine\GameObjects\Items\VictoryKey.cs" />
+    <Compile Include="Engine\Managers\AudioMgr.cs" />
+    <Compile Include="Engine\Managers\TurnMgr.cs" />
+    <Compile Include="Engine\Painter.cs" />
+    <Compile Include="FSM\IdleState.cs" />
+    <Compile Include="Actor\Player.cs" />
+    <Compile Include="FSM\WaitState.cs" />
+    <Compile Include="FSM\WalkState.cs" />
+    <Compile Include="Engine\GameObjects\GameObject.cs" />
+    <Compile Include="Controllers\Controller.cs" />
+    <Compile Include="Controllers\JoyPadCtrl.cs" />
+    <Compile Include="Controllers\KeyboardCtrl.cs" />
+    <Compile Include="Engine\Managers\CameraMgr.cs" />
+    <Compile Include="Engine\Collider\BoxCollider.cs" />
+    <Compile Include="Engine\Collider\CircleCollider.cs" />
+    <Compile Include="Engine\Collider\Collider.cs" />
+    <Compile Include="Engine\Collider\ColliderFactory.cs" />
+    <Compile Include="Engine\Collider\Collision.cs" />
+    <Compile Include="Engine\Collider\CompoundCollider.cs" />
+    <Compile Include="Engine\Components\Animation.cs" />
+    <Compile Include="Engine\Components\Component.cs" />
+    <Compile Include="Engine\Managers\DrawMgr.cs" />
+    <Compile Include="Engine\Game.cs" />
+    <Compile Include="Engine\Managers\GfxMgr.cs" />
+    <Compile Include="Engine\GUI\Text\Font.cs" />
+    <Compile Include="Engine\GUI\Text\FontMgr.cs" />
+    <Compile Include="Engine\GUI\Text\TextChar.cs" />
+    <Compile Include="Engine\GUI\Text\TextObject.cs" />
+    <Compile Include="Engine\Interfaces\IDrawable.cs" />
+    <Compile Include="Engine\Interfaces\IUpdatable.cs" />
+    <Compile Include="Engine\Managers\PhysicsMgr.cs" />
+    <Compile Include="Engine\RandomGenerator.cs" />
+    <Compile Include="Engine\RigidBody.cs" />
+    <Compile Include="Engine\Managers\UpdateMgr.cs" />
+    <Compile Include="FSM\State.cs" />
+    <Compile Include="FSM\StateMachine.cs" />
+    <Compile Include="Pathfinding\BFSAlgo.cs" />
+    <Compile Include="Pathfinding\DFSAlgo.cs" />
+    <Compile Include="Pathfinding\GreedyAlgo.cs" />
+    <Compile Include="Pathfinding\GridGraph.cs" />
+    <Compile Include="Pathfinding\Node.cs" />
+    <Compile Include="Pathfinding\NodeInfo.cs" />
+    <Compile Include="Pathfinding\NodePath.cs" />
+    <Compile Include="Pathfinding\World.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenes\AnimatedTitleScene.cs" />
+    <Compile Include="Engine\GameObjects\TileObjs\HideOut.cs" />
+    <Compile Include="Scenes\MainPlayScene.cs" />
+    <Compile Include="Scenes\PlayScene.cs" />
+    <Compile Include="Scenes\RulesScene.cs" />
+    <Compile Include="Scenes\Scene.cs" />
+    <Compile Include="Scenes\SecondaryPlayScene.cs" />
+    <Compile Include="Scenes\TitleScene.cs" />
+    <Compile Include="Tiled\Layer.cs" />
+    <Compile Include="Tiled\TileGrid.cs" />
+    <Compile Include="Tiled\TileGridFactory.cs" />
+    <Compile Include="Tiled\TileInstance.cs" />
+    <Compile Include="Engine\GameObjects\TileObjs\TileObj.cs" />
+    <Compile Include="Tiled\TileProperties.cs" />
+    <Compile Include="Tiled\TileSet.cs" />
+    <Compile Include="Tiled\TileSetFactory.cs" />
+    <Compile Include="Tiled\TileType.cs" />
+    <Compile Include="Tiled\TmxNodeParser.cs" />
+    <Compile Include="Tiled\TmxReader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AIV_Exam_SimoneSantagati_TemporaryKey.pfx" />
+    <None Include="App.config" />
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_Map.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Castle_1.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Castle_2.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Castle_3.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Castle_4.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Castle_5.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Castle_6.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Castle_7.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Cave_1.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Cave_2.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Cave_3.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Cave_4.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_City_1.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_City_10.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_City_2.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_City_3.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_City_4.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_City_5.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_City_6.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_City_7.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_City_8.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_City_9.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Swamp_1.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Swamp_2.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Swamp_3.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Swamp_4.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Swamp_5.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Village_1.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Village_2.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Village_3.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Village_4.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Tilesets\Maps\AIV_Exam_SecondaryMap_Village_5.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="OpenTK.dll.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\aivBG.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\comics.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\textSheet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\GUI\loadingBar_bar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\GUI\loadingBar_frame.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\GUI\mouseIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Items\item8BIT_bananas.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Items\item8BIT_bones.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Items\item8BIT_book.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Items\item8BIT_coin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Items\item8BIT_compass.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Items\item8BIT_crown.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Items\item8BIT_feather.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Items\item8BIT_gem.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Items\item8BIT_harp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Items\item8BIT_key.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Items\item8BIT_leaf.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Items\item8BIT_mirror.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Items\item8BIT_moneybag.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Items\item8BIT_ring.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Items\item8BIT_scroll.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Items\item8BIT_seashell.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Items\item8BIT_skullkey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\player1WinSheet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\player2WinSheet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sounds\footsteps.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sounds\background.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sounds\gameOverMusic.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sounds\pickItem.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sounds\pickItem2.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sounds\pickItem3.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sounds\Pickup01.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sounds\skipTurn.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sprites\HEROS8bit_Adventurer Idle D.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sprites\HEROS8bit_Adventurer Idle R.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sprites\HEROS8bit_Adventurer Idle U.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sprites\HEROS8bit_Adventurer Walk D.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sprites\HEROS8bit_Adventurer Walk R.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sprites\HEROS8bit_Adventurer Walk U.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sprites\HEROS8bit_Princess Idle D.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sprites\HEROS8bit_Princess Idle R.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sprites\HEROS8bit_Princess Idle U.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sprites\HEROS8bit_Princess Walk D.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sprites\HEROS8bit_Princess Walk R.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Sprites\HEROS8bit_Princess Walk U.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\tieSheet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tilesets\Cave_OpenedDoor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tilesets\PixelPackTOPDOWN8BIT - Copia - Copia.png" />
+    <Content Include="Assets\Tilesets\PixelPackTOPDOWN8BIT - Copia.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tilesets\PixelPackTOPDOWN8BIT.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tilesets\Victory_OpenedDoor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tilesets\Village_OpenedDoor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\title0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\title1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\title2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\title3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\title4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
